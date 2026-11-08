@@ -246,7 +246,7 @@ function draw(){var g=$("g");g.innerHTML="";
   g.appendChild(b)})(d)}}
 function closeRv(){$("rv").hidden=true;document.body.style.overflow="";document.body.classList.remove("rvo")}
 $("rc").onclick=closeRv;document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("rv").hidden)closeRv()});
-$("rs").onclick=function(){sh(cur+" – Calendario dell’Anti-Avvento: "+location.origin+location.pathname,$("ts"))};
+$("rs").onclick=function(){sh(cur+" – Calendario dell’Anti-Avvento: "+location.origin+"/g/"+nd+"/",$("ts"))};
 try{if(!/[?&]test(&|$)/.test(location.search)){$("pv").hidden=true;$("pv").style.display="none"}}catch(e){}
 $("pv").onclick=function(){prev=!prev;this.textContent=prev?"Chiudi l’anteprima":"Anteprima: apri tutte le finestrelle";draw()};
 draw();
@@ -281,5 +281,9 @@ $("lv2").onclick=function(){mmL=2;$("lv2").setAttribute("aria-pressed","true");$
 mmNew();
 function tab(n){[1,2,3,4].forEach(function(i){$("t"+i).setAttribute("aria-selected",i===n);$("p"+i).hidden=i!==n})}
 $("t1").onclick=function(){tab(1)};$("t2").onclick=function(){tab(2)};$("t3").onclick=function(){tab(3)};$("t4").onclick=function(){tab(4)};
+(function(){var q=/[?&]d=(\d{1,2})(&|$)/.exec(location.search);if(!q)return;var d=+q[1];if(d<1||d>25)return;
+ if(/[?&]test(&|$)/.test(location.search)){prev=true;$("pv").textContent="Chiudi l’anteprima";draw()}
+ var s0=snd;snd=false;try{$("cvb").onclick()}catch(e){}snd=s0;
+ if(ok(d)){$("g").children[d-1].click()}else{$("ts").textContent="Non ancora, bastardo. Questa si apre il "+d+" dicembre."}})();
 })();
 </script></body></html>
