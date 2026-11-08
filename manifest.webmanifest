@@ -1,0 +1,16 @@
+{
+  "name": "Calendario dell'Anti-Avvento",
+  "short_name": "Anti-Avvento",
+  "description": "25 giorni per insultare il Natale. Di Follia Bastarda.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1a0e09",
+  "theme_color": "#1a0e09",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

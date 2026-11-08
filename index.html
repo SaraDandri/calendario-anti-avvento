@@ -4,6 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Calendario dell’Anti-Avvento – Alpaca Bastardi</title>
+<meta name="description" content="25 giorni per insultare il Natale. Una finestrella al giorno, con un insulto per ognuna. Di Follia Bastarda.">
+<meta name="theme-color" content="#1a0e09">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Follia Bastarda">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Calendario dell’Anti-Avvento – Alpaca Bastardi">
+<meta property="og:description" content="25 giorni per insultare il Natale. Una finestrella al giorno, con un insulto per ognuna.">
+<meta property="og:url" content="https://calendario-anti-avvento.vercel.app/">
+<meta property="og:image" content="https://calendario-anti-avvento.vercel.app/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alpaca Bastardo con il maglione natalizio e il titolo Calendario dell’Anti-Avvento">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calendario dell’Anti-Avvento – Alpaca Bastardi">
+<meta name="twitter:description" content="25 giorni per insultare il Natale.">
+<meta name="twitter:image" content="https://calendario-anti-avvento.vercel.app/og-image.jpg">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Anti-Avvento">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#1a0e09;--card:#2a1810;--red:#d8412f;--grn:#2f6b42;--gold:#f2b84b;--cr:#fff3d6;--mut:#c9b79a;
@@ -15,7 +39,7 @@ h1{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
 .top{display:flex;align-items:center;gap:14px}.top img{width:110px;height:auto;flex:none}
 .sub{color:var(--mut);margin:4px 0 16px}
 .tabs{display:flex;gap:8px;margin-bottom:14px}
-.tab{flex:1;padding:12px 8px;border:2px solid #4a3326;background:transparent;color:var(--cr);font:inherit;font-weight:700;border-radius:10px;cursor:pointer}
+.tab{flex:1;padding:12px 4px;font-size:14px;border:2px solid #4a3326;background:transparent;color:var(--cr);font:inherit;font-weight:700;border-radius:10px;cursor:pointer}
 .tab[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
 button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .panel{background:var(--card);border-radius:16px;padding:18px;border:2px solid #3a2519}.panel[hidden]{display:none}
@@ -89,6 +113,20 @@ body{position:relative}
 .bn{display:flex;gap:14px;align-items:center;margin:10px 0;padding:14px;border:2px solid #4a3326;border-radius:14px;color:var(--cr);text-decoration:none;background:#120a06}
 .bn:active{transform:translateY(1px)}.bn .bi{font-size:30px;line-height:1;flex:none}.bn b{display:block}.bn small{display:block;color:var(--mut);font-size:14px;line-height:1.3;margin-top:2px}
 #cv .cvl{display:inline-block;margin-top:10px;color:var(--gold);font-weight:700;text-decoration:underline}
+.mm-h{margin:0 0 2px;font-weight:800}.mm-lv{display:flex;gap:8px;margin:10px 0}.mm-lv .btn{margin:0;flex:1;padding:10px 8px;font-size:14px}.mm-lv .btn[aria-pressed="true"]{background:var(--gold);color:#2a1810;border:2px solid var(--gold)}
+.mm-st{display:flex;justify-content:space-between;color:var(--mut);font-size:14px;margin:4px 0 8px}
+.mm-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0;perspective:800px}
+.mc{position:relative;aspect-ratio:3/4;border:0;padding:0;background:none;cursor:pointer;border-radius:10px;-webkit-tap-highlight-color:transparent}
+.mc .in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .35s}
+.mc.up .in{transform:rotateY(180deg)}
+.mc .f,.mc .b{position:absolute;inset:0;border-radius:10px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mc .b{background:repeating-linear-gradient(45deg,#d8412f 0 10px,#b3291b 10px 20px);border:3px solid #fff3d6;color:#fff3d6;font:400 34px Anton,Impact,sans-serif}
+.mc .f{transform:rotateY(180deg);background:linear-gradient(#fff3c6,#ffe9a6);border:3px solid #f2b84b}
+.mc .f img{width:92%;height:92%;object-fit:contain}
+.mc.ok .f{border-color:#2f6b42;box-shadow:0 0 0 3px #2f6b42}
+.mm-msg{min-height:26px;color:var(--gold);font-weight:700;margin:6px 0}
+.mm-win{margin-top:8px;padding:14px;border-radius:12px;background:#120a06;border-left:6px solid var(--gold)}.mm-win[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.mc .in{transition:none}}
 </style>
 </head>
 <body><div id="cv" role="dialog" aria-label="Copertina">
@@ -107,6 +145,7 @@ body{position:relative}
 <button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1">Calendario</button>
 <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2">Mail bastarde</button>
 <button class="tab" role="tab" id="t3" aria-selected="false" aria-controls="p3">Bonus</button>
+<button class="tab" role="tab" id="t4" aria-selected="false" aria-controls="p4">Gioco</button>
 </div>
 
 <section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
@@ -139,6 +178,16 @@ body{position:relative}
 <p style="margin:18px 0 4px;font-weight:800">Seguici</p>
 <a class="bn" href="https://www.instagram.com/follia.bastarda/" target="_blank" rel="noopener"><span class="bi">📸</span><span><b>Instagram</b><small>@follia.bastarda</small></span></a>
 <a class="bn" href="https://www.tiktok.com/@follia.bastarda" target="_blank" rel="noopener"><span class="bi">🎬</span><span><b>TikTok</b><small>@follia.bastarda</small></span></a>
+</section>
+
+<section class="panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+<p class="mm-h">Il Memory dell’Alpaca Bastardo</p>
+<p class="note" style="margin-top:0">Trova le coppie. Meno mosse fai, meno bastardo sei. Anzi, più.</p>
+<div class="mm-lv"><button class="btn sec" id="lv1" aria-pressed="true">Facile</button><button class="btn sec" id="lv2" aria-pressed="false">Bastardo</button></div>
+<div class="mm-st"><span id="mmm">Mosse: 0</span><span id="mmb"></span></div>
+<div class="mm-g" id="mg"></div>
+<div class="mm-msg" id="mms" role="status" aria-live="polite"></div>
+<div class="mm-win" id="mw" hidden><b id="mwt"></b><p id="mwm" style="margin:6px 0 0"></p><button class="btn" id="mws">Sfida un bastardo</button><button class="btn sec" id="mwr">Rigioca</button></div>
 </section>
 
 <div class="cta"><div class="h">25 giorni di insulti veri, da colorare e da subire</div>
@@ -197,14 +246,40 @@ function draw(){var g=$("g");g.innerHTML="";
   g.appendChild(b)})(d)}}
 function closeRv(){$("rv").hidden=true;document.body.style.overflow="";document.body.classList.remove("rvo")}
 $("rc").onclick=closeRv;document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("rv").hidden)closeRv()});
-$("rs").onclick=function(){sh(cur+" – Calendario dell’Anti-Avvento: "+location.href,$("ts"))};
-try{if(!/[?&]test(&|$)/.test(location.search))$("pv").hidden=true}catch(e){}
+$("rs").onclick=function(){sh(cur+" – Calendario dell’Anti-Avvento: "+location.origin+location.pathname,$("ts"))};
+try{if(!/[?&]test(&|$)/.test(location.search)){$("pv").hidden=true;$("pv").style.display="none"}}catch(e){}
 $("pv").onclick=function(){prev=!prev;this.textContent=prev?"Chiudi l’anteprima":"Anteprima: apri tutte le finestrelle";draw()};
 draw();
 MAIL.forEach(function(x){var b=document.createElement("button");b.className="btn sec";b.textContent=x[0];b.style.margin="0";
  b.onclick=function(){$("mail").value="Oggetto: "+x[1]+"\n\n"+x[2]};$("ch").appendChild(b)});
 $("cp").onclick=function(){if(!$("mail").value){$("tm").textContent="Scegli prima un destinatario.";return}sh($("mail").value,$("tm"))};
-function tab(n){[1,2,3].forEach(function(i){$("t"+i).setAttribute("aria-selected",i===n);$("p"+i).hidden=i!==n})}
-$("t1").onclick=function(){tab(1)};$("t2").onclick=function(){tab(2)};$("t3").onclick=function(){tab(3)};
+
+var MI=[1,3,9,13,19,20,22,24,6,12],mmL=1,mmF=[],mmO=[],mmMv=0,mmLock=false,mmDone=0;
+var MBAD=["Eh no.","Ti pare?","Memoria da criceto.","Quasi. Cioè no.","Riprova, bastardo.","Il Natale ti ha mangiato il cervello.","Ma guardi le carte?"],MGOOD=["Bastardo fortunato!","Coppia. Contento?","Caso o talento? Caso.","Va bene, uno a zero.","Ti sei salvato."];
+function mmBest(){var v=null;try{v=localStorage.getItem("ab-mm"+mmL)}catch(e){}return v?+v:null}
+function mmInfo(){$("mmm").textContent="Mosse: "+mmMv;var b=mmBest();$("mmb").textContent=b?"Record: "+b:""}
+function mmNew(){var n=mmL===1?6:10,ids=MI.slice(0,n),a=ids.concat(ids);for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=a[i];a[i]=a[j];a[j]=x}
+ mmF=a;mmO=[];mmMv=0;mmLock=false;mmDone=0;$("mw").hidden=true;$("mms").textContent="";mmInfo();
+ var g=$("mg");g.innerHTML="";
+ a.forEach(function(id,i){var b=document.createElement("button");b.className="mc";b.type="button";b.setAttribute("aria-label","Carta "+(i+1)+", coperta");
+  b.innerHTML='<span class="in"><span class="b">?</span><span class="f"><img alt=""></span></span>';b.querySelector("img").src=IM[id];
+  b.onclick=function(){mmFlip(i,b)};g.appendChild(b)})}
+function mmFlip(i,b){if(mmLock||b.classList.contains("up")||b.classList.contains("ok"))return;
+ b.classList.add("up");b.setAttribute("aria-label","Carta "+(i+1)+", alpaca scoperta");tone(660,0,.08,"triangle",.1);mmO.push([i,b]);
+ if(mmO.length<2)return;mmMv++;mmInfo();var A=mmO[0],B=mmO[1];mmO=[];
+ if(mmF[A[0]]===mmF[B[0]]){A[1].classList.add("ok");B[1].classList.add("ok");mmDone++;$("mms").textContent=MGOOD[Math.floor(Math.random()*MGOOD.length)];bells(0,3);tone(880,0,.18,"triangle",.15);
+  if(mmDone===mmF.length/2)setTimeout(mmWin,500)}
+ else{mmLock=true;$("mms").textContent=MBAD[Math.floor(Math.random()*MBAD.length)];tone(196,.15,.2,"sawtooth",.08);
+  setTimeout(function(){A[1].classList.remove("up");B[1].classList.remove("up");A[1].setAttribute("aria-label","Carta "+(A[0]+1)+", coperta");B[1].setAttribute("aria-label","Carta "+(B[0]+1)+", coperta");mmLock=false},850)}}
+function mmWin(){var n=mmF.length/2,b=mmBest(),rec=!b||mmMv<b;if(rec){try{localStorage.setItem("ab-mm"+mmL,mmMv)}catch(e){}}
+ var t=mmMv<=n+2?"Perfetto. Sei più bastardo di me.":mmMv<=n*2?"Passabile. Per un parente.":"Nonno ci mette meno. E ha le cataratte.";
+ $("mwt").textContent="Finito in "+mmMv+" mosse.";$("mwm").textContent=t+(rec?" Nuovo record.":"");$("mw").hidden=false;sIn();mmInfo()}
+$("mws").onclick=function(){sh("Ho finito il Memory dell’Alpaca Bastardo in "+mmMv+" mosse. Batti il mio record: "+location.origin+location.pathname,$("mms"))};
+$("mwr").onclick=mmNew;
+$("lv1").onclick=function(){mmL=1;$("lv1").setAttribute("aria-pressed","true");$("lv2").setAttribute("aria-pressed","false");mmNew()};
+$("lv2").onclick=function(){mmL=2;$("lv2").setAttribute("aria-pressed","true");$("lv1").setAttribute("aria-pressed","false");mmNew()};
+mmNew();
+function tab(n){[1,2,3,4].forEach(function(i){$("t"+i).setAttribute("aria-selected",i===n);$("p"+i).hidden=i!==n})}
+$("t1").onclick=function(){tab(1)};$("t2").onclick=function(){tab(2)};$("t3").onclick=function(){tab(3)};$("t4").onclick=function(){tab(4)};
 })();
 </script></body></html>
